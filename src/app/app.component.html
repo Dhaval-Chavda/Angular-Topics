@@ -105,9 +105,9 @@
 
 
 
-<!--=============================================================== LOOPS IN ANGULAR ============================================================-->
+<!--===================================================================== LOOPS IN ANGULAR ========================================================================-->
 
-<h1>Loops In Angular</h1>
+<!-- <h1>Loops In Angular</h1>
 
 <h3 *ngFor="let i of Users">
 
@@ -116,6 +116,119 @@
 
 <h3 *ngFor="let Details of UserDetails">
 
-  Details Of Users : {{Details.name}}
+  Details Of Users : {{Details.name}} -- {{Details.email}} -- {{Details.Phone}}
 </h3>
+   -->
+
+
+<!--=================================================================== NESTED LOOPS ==================================================================================-->
+
+<!-- 
+<ul *ngFor="let i of users">
+
+  <li>Name: {{i.name}}</li>
+  <li>Phone: {{i.phone}}</li>
+  <li>Social Accounts:</li>
+
+  <ul *ngFor="let account of i.socialAccounts">
+
+    <li>{{account}}</li>
+  </ul>
+
+</ul> -->
+
+
+<!--========================================================================= STYLE-BINDING IN ANGULAR ==============================================================-->
+
+
+
+<!-- <h1 [style.color]="color" [style.backgroundColor]="bgcolor">{{title}}</h1>
+
+<button (click)="updateColor()">UpdateColor</button> -->
+
+
+
+<!--========================================================================= Header =========================================================================-->
+<!-- 
+<nav>
+  <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="">
+
+
+<ul>
+  <li><a href="">Home</a></li>
+  <li><a href="">About</a></li>
+  <li><a href="">Contact</a></li>
+  <li><a href="">Service</a></li>
+</ul>
+
+</nav> -->
+
+
+<!--===============================================================================  Basic Forms  ============================================================-->
+
+<!-- <h1>Basic Form</h1>
+<br><br>
+
+
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value )" >
+
+  <input type="text" ngModel name="user" id="" placeholder="Enter Name">
+  <br><br>
+
+  <input type="text" ngModel name="email" id="" placeholder="Enter Email">
+  <br><br>
+
+  <input type="text" ngModel name="password" id="" placeholder="Enter Password">
+  <br><br><br>
+
+  <button>Submit</button>
+
+</form>
+
+<br>
+
+<ul>
+  <li>{{userData.user}}</li>
+  <li>{{userData.email}}</li>
+  <li>{{userData.password}}</li>
+</ul> -->
+
+
+
+<!--=========================================================================== Toggle Element =======================================================-->
+
+<!-- <h1>
+  Toggle Element
+</h1>
+
+<button (click)="toggle()">Toggle</button>
+
+<h2 *ngIf="display">Welcome</h2> -->
+
+<!--================================================================= Make Simple TO-DO ================================================================-->
+
+<!-- 
+
+<h1>Simple TO-DO</h1>
+
+<input type="text" name="" id="" placeholder="Enter New Task" #task>
+
+<br><br>
+
+<button (click)="addTask(task.value)">Add Task</button>
+
+
+<ul *ngFor="let item of list">
+  <li>{{item.name}}</li><button (click)="Remove(item.id)">Delete</button>
   
+  
+</ul> -->
+
+
+<!--=================================================================== Two Way - Binding ===============================================================-->
+
+
+
+<input type="text" name="" id="" [(ngModel)]="nm">
+
+<h3>{{nm}}</h3>
