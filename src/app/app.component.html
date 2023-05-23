@@ -228,7 +228,59 @@
 <!--=================================================================== Two Way - Binding ===============================================================-->
 
 
-
+<!-- 
 <input type="text" name="" id="" [(ngModel)]="nm">
 
-<h3>{{nm}}</h3>
+<h3>{{nm}}</h3> -->
+
+
+<!--=================================================================== Template Reference Variable =============================================================-->
+
+                                            <!-- aa variable thi koi pan input field ni values get kari shakiye chhhiye -->
+
+<!-- 
+<input type="text" name="" id="" #box>
+
+<button (click)="getVal(box.value)">Click me</button> -->
+
+
+<!--=================================================================== Basic Types Of Typescript =============================================================-->
+
+
+                                                                                  <!-- 
+                                                                                  1. number
+                                                                                  2. string
+                                                                                  3. boolean
+                                                                                  4. any -->
+
+
+<!--=================================================================== Basic of Pipes in Angular =============================================================-->
+
+<!-- pipe no use data transform karva mate thay chhe & HTML vala page maj use karvano chhe-->
+<!-- 
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{title}}</h1>
+
+
+<h3>{{date | date : 'fullDate' }}</h3>
+
+-->
+
+<!--=================================================================== Advance Pipes in Angular =============================================================-->
+
+<!-- 
+<h1>{{name | slice : 3 : 6}}</h1>
+<h1>{{name2 | json}}</h1>
+<h1>{{name | uppercase}}</h1>
+<h1>{{2000.3000 | number : '2.2-3'}}</h1>
+<h1>{{50 | currency: 'GBP'}}</h1> -->
+
+<!--=================================================================== Custom Pipes in Angular =============================================================-->
+
+<h1>Custom Pipes</h1>
+{{20 | usdInr : 75}}
+
+
+
+

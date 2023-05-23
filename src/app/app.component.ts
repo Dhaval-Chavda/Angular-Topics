@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Topics';
 
-  data = "Dhaval Chavda";
+  // data = "Dhaval Chavda";
 
   // get()
   // {
@@ -109,6 +109,42 @@ export class AppComponent {
 //       this.list=this.list.filter(item => item.id!==id)
 // }
 
-nm:any;
+////////////////////////////////////////////////////////////// Two way Binding  ///////////////////////////////////////////////////////////////////////////////
 
+// nm:any;
+
+
+///////////////////////////////////////////////////////////////////////// Template Reference Variable //////////////////////////////////////////////////////////
+
+// getVal(item:any)
+// {
+//   console.log(item);
+
+// }
+
+
+// =================================================================== Basic Types Of Types Script =============================================================
+
+
+// data:{name:string, age:number}={name:'Dhaval', age:21};
+// item:string[]=["hello","hii","heyy"];
+
+
+// getData(item:number[])
+// {
+//     if(typeof item === "number")
+//     {
+//       return item*20;
+//     }
+// }
+
+
+// date = Date();
+
+
+name:string = "Dhaval Chavda";
+
+name2 = {
+  name:'Dhaval', age:21
+}
 }
