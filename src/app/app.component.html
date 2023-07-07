@@ -148,7 +148,7 @@
 
 
 
-<!--========================================================================= Header =========================================================================-->
+<!--========================================================================= HEADER =========================================================================-->
 <!-- 
 <nav>
   <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="">
@@ -164,7 +164,7 @@
 </nav> -->
 
 
-<!--===============================================================================  Basic Forms  ============================================================-->
+<!--===============================================================================  BASIC FORM  ============================================================-->
 
 <!-- <h1>Basic Form</h1>
 <br><br>
@@ -195,7 +195,7 @@
 
 
 
-<!--=========================================================================== Toggle Element =======================================================-->
+<!--=========================================================================== TOGGLE ELEMENT =======================================================-->
 
 <!-- <h1>
   Toggle Element
@@ -278,9 +278,75 @@
 
 <!--=================================================================== Custom Pipes in Angular =============================================================-->
 
-<h1>Custom Pipes</h1>
-{{20 | usdInr : 75}}
+<!-- <h1>Custom Pipes</h1>
+{{20 | usdInr : 75}} -->
+
+
+<!--=================================================================== Template Driven Form =============================================================-->
 
 
 
+<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
 
+  <input type="text" name="user" id=""  placeholder="Enter Name" ngModel>
+  <br><br>
+  <input type="text" name="password" id="" placeholder="Enter Password" ngModel>
+  <br><br>
+
+  <button>Login</button>
+
+</form>
+ -->
+
+
+ <!--=================================================================== Reactive Form [impoprtant] =============================================================-->
+
+<!-- 
+ <h1>Reactive Form</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="user" id="" placeholder="Enter Name" formControlName="user">
+  <br><br>
+  <input type="text" name="password" id="" placeholder="Enter Password" formControlName="password">
+<br><br><br>
+  <button>Submit</button>
+
+</form> -->
+
+ <!--=================================================================== Normal Routing ===================================================================-->
+
+<!-- <a routerLink="home">Home</a>
+<br>
+<a routerLink="about">About</a>
+<br>
+<a routerLink="contact">Contact</a>
+ -->
+
+ <!--=================================================================== Reactive Form Validation [important]]===================================================================-->
+
+ <!-- <h1>Reactive Form Validations</h1>
+
+ <form [formGroup]="loginFormValidation" (ngSubmit)="loginUser()">
+   <input type="text" name="user" id="" placeholder="Enter Name" formControlName="user" #show>
+   <br><br>
+
+   <span style="color: red;" *ngIf="user && user.invalid && user.touched">This Field is Not Valid</span><br><br>
+   <input type="password" name="password" id="" placeholder="Enter Password" formControlName="password" #show2><br>
+   <span style="color: red;" *ngIf="password && password.invalid && password.touched">This Field is Not Valid</span><br><br>
+
+ <br><br><br>
+
+   <button [disabled]="loginFormValidation.invalid" (click)="showData(show.value)">Submit</button>
+
+   <p>{{loginFormValidation.value.user}}</p>
+   <p>{{loginFormValidation.value.password}}</p> 
+
+ </form>  -->
+
+                                                         <!-- Show Data Child components To Parent Components -->
+
+
+ 
+
+
+<router-outlet></router-outlet>

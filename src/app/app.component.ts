@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Topics';
-
+  
   // data = "Dhaval Chavda";
 
   // get()
@@ -33,7 +34,7 @@ export class AppComponent {
 
   // color = "red";
 
-  //////////////////////////////////////////////////////////////  Loops Aray & Objects  ///////////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////  Loops Array & Objects  ///////////////////////////////////////////////////////////////////////////////////////
 
 
   // Users = ['Dhaval', 'Parth', 'Haresh', 'Ankit', 'Niraj', 'Akash', 'Dhruv', 'Shahil'];
@@ -142,9 +143,62 @@ export class AppComponent {
 // date = Date();
 
 
-name:string = "Dhaval Chavda";
+// name:string = "Dhaval Chavda";
 
-name2 = {
-  name:'Dhaval', age:21
+// name2 = {
+//   name:'Dhaval', age:21
+// }
+
+
+/////////////////////////////////////////////////////////////////// Template Driven Form  /////////////////////////////////////////////////////////////////////////
+
+// userLogin(item:any){
+//   console.log(item);
+// }
+
+
+////////////////////////////////////////////////////////////////   Reactive Form [important]  ///////////////////////////////////////////////////////////////////
+
+
+// loginForm = new FormGroup({
+
+//   user:new FormControl(''),
+//   password:new FormControl('')
+
+// })
+
+// loginUser()
+// {
+//   console.log(this.loginForm.value);
+// }
+
+////////////////////////////////////////////////////////////////  Reactive Form Validations [important]  /////////////////////////////////////////////////////////////////
+
+
+loginFormValidation = new FormGroup({
+
+  user:new FormControl('', [Validators.required, Validators.email]),
+  password:new FormControl('', [Validators.required,Validators.minLength(5)])
+
+})
+
+loginUser()
+{
+  console.log(this.loginFormValidation.value);
 }
+
+get user(){
+
+  return this.loginFormValidation.get('user');
 }
+get password()
+{
+  return this.loginFormValidation.get('password');
+}
+showData(show:string)
+{
+  console.log(show);
+}
+                                                                                                                     
+}
+
