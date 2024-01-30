@@ -1,18 +1,18 @@
 <!-- #####################################################################  { LEARN ANGULAR }  ################################################################ -->
 
 
-       
+
       <!--============================================================== Inter Polation ===================================================================-->
 
 
 
                 <!--   ==>  INTERPOLATION MA A KOI PAN [ VARIABLES, ARITHMETIC OPERATIONS, COMPARIGON CONDITIONS] USED KARI SHAKIYE CHHIYE -->
 
-<!-- 
+<!--
 
 <h1>{{title}}</h1>
 
-<h3>{{data}}</h3>                            
+<h3>{{data}}</h3>
 
 
 
@@ -21,7 +21,7 @@
 
 
 <!--================================================================ EVENTS IN ANGULAR ==============================================================-->
-<!-- 
+<!--
 <button (click)="getData('hello')">Click me!</button>
 <br><br>
 
@@ -57,7 +57,7 @@
 
 
 <!--==================================================================== IF-ELSE IN ANGULAR =======================================================-->
-<!-- 
+<!--
 <h1>If - else</h1>
 
 <h3 *ngIf="show == 'Dhaval' then ifBlock else elseBlock"></h3>
@@ -100,7 +100,7 @@
     <h2 *ngSwitchCase="'yellow'" style="color: yellow;"> Yellow Color</h2>
     <h2 *ngSwitchCase="'pink'" style="color: pink;">Pink Color</h2>
     <h2 *ngSwitchDefault> Unknown Color</h2>
-  
+
 </div> -->
 
 
@@ -123,7 +123,7 @@
 
 <!--=================================================================== NESTED LOOPS ==================================================================================-->
 
-<!-- 
+<!--
 <ul *ngFor="let i of users">
 
   <li>Name: {{i.name}}</li>
@@ -149,7 +149,7 @@
 
 
 <!--========================================================================= HEADER =========================================================================-->
-<!-- 
+<!--
 <nav>
   <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="">
 
@@ -207,9 +207,9 @@
 
 <!--================================================================= Make Simple TO-DO ================================================================-->
 
-<!-- 
 
-<h1>Simple TO-DO</h1>
+
+<!-- <h1>Simple TO-DO</h1>
 
 <input type="text" name="" id="" placeholder="Enter New Task" #task>
 
@@ -220,15 +220,13 @@
 
 <ul *ngFor="let item of list">
   <li>{{item.name}}</li><button (click)="Remove(item.id)">Delete</button>
-  
-  
 </ul> -->
 
 
 <!--=================================================================== Two Way - Binding ===============================================================-->
 
 
-<!-- 
+<!--
 <input type="text" name="" id="" [(ngModel)]="nm">
 
 <h3>{{nm}}</h3> -->
@@ -238,16 +236,18 @@
 
                                             <!-- aa variable thi koi pan input field ni values get kari shakiye chhhiye -->
 
-<!-- 
-<input type="text" name="" id="" #box>
 
-<button (click)="getVal(box.value)">Click me</button> -->
+<!-- <input type="text" name="" id="" #box>
+
+<button (click)="getVal(box.value)">Click me</button>
+
+<p>{{show}}</p> -->
 
 
 <!--=================================================================== Basic Types Of Typescript =============================================================-->
 
 
-                                                                                  <!-- 
+                                                                                  <!--
                                                                                   1. number
                                                                                   2. string
                                                                                   3. boolean
@@ -257,7 +257,7 @@
 <!--=================================================================== Basic of Pipes in Angular =============================================================-->
 
 <!-- pipe no use data transform karva mate thay chhe & HTML vala page maj use karvano chhe-->
-<!-- 
+<!--
 <h1>{{title | uppercase}}</h1>
 <h1>{{title | lowercase}}</h1>
 <h1>{{title}}</h1>
@@ -269,7 +269,7 @@
 
 <!--=================================================================== Advance Pipes in Angular =============================================================-->
 
-<!-- 
+<!--
 <h1>{{name | slice : 3 : 6}}</h1>
 <h1>{{name2 | json}}</h1>
 <h1>{{name | uppercase}}</h1>
@@ -301,7 +301,7 @@
 
  <!--=================================================================== Reactive Form [impoprtant] =============================================================-->
 
-<!-- 
+<!--
  <h1>Reactive Form</h1>
 
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
@@ -339,14 +339,14 @@
    <button [disabled]="loginFormValidation.invalid" (click)="showData(show.value)">Submit</button>
 
    <p>{{loginFormValidation.value.user}}</p>
-   <p>{{loginFormValidation.value.password}}</p> 
+   <p>{{loginFormValidation.value.password}}</p>
 
  </form>  -->
 
                                                          <!-- Show Data Child components To Parent Components -->
 
 
- 
+
 
 
 <router-outlet></router-outlet>

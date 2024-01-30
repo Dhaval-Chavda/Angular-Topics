@@ -6,23 +6,29 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
- 
+
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { HomeComponent } from './home/home.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     UsdInrPipe,
-    HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+     HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

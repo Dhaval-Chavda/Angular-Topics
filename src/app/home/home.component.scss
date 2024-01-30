@@ -1,0 +1,66 @@
+.center {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  p {
+    margin-left: 10px;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.grid-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+    max-height: 100%;
+    background-image: url("/assets/pexels-photo-674010.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  li {
+    color: red;
+  }
+}
+
+.sign-form {
+  background-color: rgb(182, 178, 178);
+  border: 1px solid gray;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 40px;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: max-content;
+
+  .form-body {
+    text-align: center;
+
+    .form-control {
+      margin: 15px 0;
+    }
+    .sub-btn {
+      margin: 0 auto;
+    }
+  }
+}
+.image-size {
+  width: 500px;
+}
+
+

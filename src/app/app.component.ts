@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,7 +9,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular-Topics';
-  
+
   // data = "Dhaval Chavda";
 
   // get()
@@ -49,7 +49,7 @@ export class AppComponent {
   // ]
 
 
-////////////////////////////////////////////////////////////////   Nested Loops  ////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////   Nested Loops  ////////////////////////////////////////////////////////////////////////////////////
 
   // users = [
   //     {name:'Dhaval', phone:'2112' , socialAccounts: ['Whats Up','faceBook','Instagram']},
@@ -59,7 +59,7 @@ export class AppComponent {
   // ]
 
 
-////////////////////////////////////////////////////////////////////  style binding  ///////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////  style binding  ///////////////////////////////////////////////////////////////////////////
 
   // color="red";
   // bgcolor = "green";
@@ -68,11 +68,11 @@ export class AppComponent {
   // {
   //   this.color='blue';
   //   this.bgcolor="black";
-  
+
   // }
 
 
-///////////////////////////////////////////////////////////////// Basic Form /////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////// Basic Form /////////////////////////////////////////////////////////////////////////////
 
 
   // userData:any={};
@@ -83,122 +83,121 @@ export class AppComponent {
   //   this.userData=data;
   // }
 
-////////////////////////////////////////////////////////////////  Toggle Element  ///////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////  Toggle Element  ///////////////////////////////////////////////////////////////////
 
-// display=true;
+  // display=true;
 
-// toggle(){
-//   this.display=!this.display;
-// }
-
-
-
-////////////////////////////////////////////////////////////////  Make Simple TO-DO  ///////////////////////////////////////////////////////////////////
+  // toggle(){
+  //   this.display=!this.display;
+  // }
 
 
-// list:any[] = [];
 
-// addTask(item:string)
-// {
- 
-//   this.list.push({id:this.list.length, name:item});
-//   console.log(this.list);
-// }
-
-// Remove(id:number){
-//   console.log(id);
-//       this.list=this.list.filter(item => item.id!==id)
-// }
-
-////////////////////////////////////////////////////////////// Two way Binding  ///////////////////////////////////////////////////////////////////////////////
-
-// nm:any;
+  ////////////////////////////////////////////////////////////////  Make Simple TO-DO  ///////////////////////////////////////////////////////////////////
 
 
-///////////////////////////////////////////////////////////////////////// Template Reference Variable //////////////////////////////////////////////////////////
+  // list: any[] = [];
 
-// getVal(item:any)
-// {
-//   console.log(item);
+  // addTask(item: string) {
 
-// }
+  //   this.list.push({ id: this.list.length, name: item });
 
+  // }
 
-// =================================================================== Basic Types Of Types Script =============================================================
+  // Remove(id: number) {
+  //   this.list = this.list.filter(item => item.id !== id)
+  // }
 
+  ////////////////////////////////////////////////////////////// Two way Binding  ///////////////////////////////////////////////////////////////////////////////
 
-// data:{name:string, age:number}={name:'Dhaval', age:21};
-// item:string[]=["hello","hii","heyy"];
-
-
-// getData(item:number[])
-// {
-//     if(typeof item === "number")
-//     {
-//       return item*20;
-//     }
-// }
+  // nm:any;
 
 
-// date = Date();
+  ///////////////////////////////////////////////////////////////////////// Template Reference Variable //////////////////////////////////////////////////////////
+  // show: any;
+  // getVal(item: any) {
+  //   // console.log(item);
+  //   this.show = item;
+
+  // }
 
 
-// name:string = "Dhaval Chavda";
-
-// name2 = {
-//   name:'Dhaval', age:21
-// }
+  // =================================================================== Basic Types Of Types Script =============================================================
 
 
-/////////////////////////////////////////////////////////////////// Template Driven Form  /////////////////////////////////////////////////////////////////////////
-
-// userLogin(item:any){
-//   console.log(item);
-// }
+  // data:{name:string, age:number}={name:'Dhaval', age:21};
+  // item:string[]=["hello","hii","heyy"];
 
 
-////////////////////////////////////////////////////////////////   Reactive Form [important]  ///////////////////////////////////////////////////////////////////
+  // getData(item:number[])
+  // {
+  //     if(typeof item === "number")
+  //     {
+  //       return item*20;
+  //     }
+  // }
 
 
-// loginForm = new FormGroup({
-
-//   user:new FormControl(''),
-//   password:new FormControl('')
-
-// })
-
-// loginUser()
-// {
-//   console.log(this.loginForm.value);
-// }
-
-////////////////////////////////////////////////////////////////  Reactive Form Validations [important]  /////////////////////////////////////////////////////////////////
+  // date = Date();
 
 
-loginFormValidation = new FormGroup({
+  // name:string = "Dhaval Chavda";
 
-  user:new FormControl('', [Validators.required, Validators.email]),
-  password:new FormControl('', [Validators.required,Validators.minLength(5)])
+  // name2 = {
+  //   name:'Dhaval', age:21
+  // }
 
-})
 
-loginUser()
-{
-  console.log(this.loginFormValidation.value);
-}
+  /////////////////////////////////////////////////////////////////// Template Driven Form  /////////////////////////////////////////////////////////////////////////
 
-get user(){
+  // userLogin(item:any){
+  //   console.log(item);
+  // }
 
-  return this.loginFormValidation.get('user');
-}
-get password()
-{
-  return this.loginFormValidation.get('password');
-}
-showData(show:string)
-{
-  console.log(show);
-}
-                                                                                                                     
+
+  ////////////////////////////////////////////////////////////////   Reactive Form [important]  ///////////////////////////////////////////////////////////////////
+
+
+  // loginForm = new FormGroup({
+
+  //   user:new FormControl(''),
+  //   password:new FormControl('')
+
+  // })
+
+  // loginUser()
+  // {
+  //   console.log(this.loginForm.value);
+  // }
+
+  ////////////////////////////////////////////////////////////////  Reactive Form Validations [important]  /////////////////////////////////////////////////////////////////
+
+
+  // loginFormValidation = new FormGroup({
+
+  //   user:new FormControl('', [Validators.required, Validators.email]),
+  //   password:new FormControl('', [Validators.required,Validators.minLength(5)])
+
+  // })
+
+  // loginUser()
+  // {
+  //   console.log(this.loginFormValidation.value);
+  // }
+
+  // get user(){
+
+  //   return this.loginFormValidation.get('user');
+  // }
+  // get password()
+  // {
+  //   return this.loginFormValidation.get('password');
+  // }
+  // showData(show:string)
+  // {
+  //   console.log(show);
+  // }
+
+
 }
 
